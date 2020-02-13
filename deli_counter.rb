@@ -1,29 +1,36 @@
-katz_deli = []
+katz_deli = [] 
 
-def line(katz_deli)
-  line_positions = []
-  if katz_deli.empty?
+def take_a_number(array, name)
+  array.push(name)
+  position = array.index(name)
+  puts "Welcome, #{name}. You are number #{array.index(name)+1} in line."
+  return name, position 
+end 
+
+take_a_number(katz_deli, "Grace")
+take_a_number(katz_deli, "Tom")
+take_a_number(katz_deli, "Alan")
+
+def line(array) 
+  if array.length == 0 
     puts "The line is currently empty."
-  else
-    number = 1
-    katz_deli.each do |customer|
-      line_positions << "#{number}. #{customer}"
-      number += 1
-    end
-    puts "The line is currently: #{line_positions.join(" ")}"
-  end
-end
+  else 
+    message = "The line is currently:"
+    
+  array.each_with_index do |value, index| 
+    message += " #{index.to_i+1}. #{value}"
+  end 
+  puts "#{message}"
+  end 
+end 
+ 
+line(katz_deli)
 
-def take_a_number(katz_deli, name)
-  katz_deli << name
-  puts "Welcome, #{name}. You are number #{katz_deli.size} in line."
-end
 
-def now_serving(katz_deli)
-  if katz_deli.empty?
+def now_serving(array)
+  if array.empty? == true 
     puts "There is nobody waiting to be served!"
-  else
-    puts "Currently serving #{katz_deli.first}."
-    katz_deli.shift
-  end
-end
+  elsif array.empty? == false 
+    puts "Currently serving #{array.shift}."
+  end 
+end 
