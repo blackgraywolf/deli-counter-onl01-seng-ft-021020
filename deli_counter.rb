@@ -35,4 +35,3 @@ def now_serving(array)
   end 
 end 
 
-now_serving(katz_deli)
