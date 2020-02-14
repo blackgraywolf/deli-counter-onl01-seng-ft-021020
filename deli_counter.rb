@@ -13,13 +13,12 @@ def line(array)
   else 
     message = "The line is currently:"
     
-  array.each_with_index do |value, index| 
-    message += " #{index.to_i+1}. #{value}"
+  array.each_with_index do |name, num| 
+    message += " #{num.to_i+1}. #{name}"
   end 
   puts "#{message}"
   end 
 end 
-
 
 
 def now_serving(array)
