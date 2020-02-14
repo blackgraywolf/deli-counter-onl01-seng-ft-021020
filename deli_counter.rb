@@ -1,4 +1,3 @@
-katz_deli = [] 
 
 def take_a_number(array = katz_deli, name)
   array.push(name)
