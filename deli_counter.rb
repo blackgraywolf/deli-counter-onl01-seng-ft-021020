@@ -7,9 +7,6 @@ def take_a_number(array = katz_deli, name)
   return name, point 
 end 
 
-take_a_number(katz_deli, "Grace")
-take_a_number(katz_deli, "Tom")
-take_a_number(katz_deli, "Alan")
 
 def line(array) 
   if array==[]
@@ -23,8 +20,7 @@ def line(array)
   puts "#{message}"
   end 
 end 
- 
-line(katz_deli)
+
 
 
 def now_serving(array)
