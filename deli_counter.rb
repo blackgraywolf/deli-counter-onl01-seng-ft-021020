@@ -1,10 +1,10 @@
 katz_deli = [] 
 
-def take_a_number(array, name)
+def take_a_number(array = katz_deli, name)
   array.push(name)
-  position = array.index(name)
+  point = array.index(name)
   puts "Welcome, #{name}. You are number #{array.index(name)+1} in line."
-  return name, position 
+  return name, point 
 end 
 
 take_a_number(katz_deli, "Grace")
@@ -12,7 +12,7 @@ take_a_number(katz_deli, "Tom")
 take_a_number(katz_deli, "Alan")
 
 def line(array) 
-  if array.length == 0 
+  if array==[]
     puts "The line is currently empty."
   else 
     message = "The line is currently:"
@@ -34,3 +34,5 @@ def now_serving(array)
     puts "Currently serving #{array.shift}."
   end 
 end 
+
+now_serving(katz_deli)
